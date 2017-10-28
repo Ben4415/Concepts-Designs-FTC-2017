@@ -110,6 +110,7 @@ public class AutonomousTest extends LinearOpMode {
                             }
                         }
                     } else { //if anything else is done (IE both true or both false), skip.
+                        runtime.reset();
                         step++;
                     }
                 case 1: //if red, the robot will turn slightly one way, vise-versa for blue.
@@ -136,6 +137,7 @@ public class AutonomousTest extends LinearOpMode {
                             step++;
                         }
                     } else { //if anything else is done (IE both true or both false), skip.
+                        runtime.reset();
                         step++;
                     }
                 case 2: //universal stop code.
