@@ -149,12 +149,12 @@ public class AutonomousTest extends LinearOpMode {
 
                     LM.setPower(m5);
                     RM.setPower(m5);
-
-                    idle();
+                    
                     break;
                 default: 
                     break;
             }
+            idle();
         }
     }
 }
