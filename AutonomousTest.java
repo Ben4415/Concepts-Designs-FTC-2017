@@ -99,7 +99,7 @@ public class AutonomousTest extends LinearOpMode {
                             s.enableLed(true);
 
                             LM.setPower(m1);
-                            RM.setPower(m2);
+                            RM.setPower(m1);
                         } else {
                             LM.setPower(m5);
                             RM.setPower(m5);
