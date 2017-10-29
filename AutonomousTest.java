@@ -25,7 +25,7 @@ public class AutonomousTest extends LinearOpMode {
     ColorSensor s;
 
     private final static double m1 = 0.5; //normal power
-    private final static double m2 = -0.5; //reverse normal power
+    //private final static double m2 = -0.5; //reverse normal power
 
     private final static double m3 = 0.25; //half power
     private final static double m4 = -0.25; //negative half power
@@ -113,6 +113,7 @@ public class AutonomousTest extends LinearOpMode {
                         runtime.reset();
                         step++;
                     }
+                    break;
                 case 1: //if red, the robot will turn slightly one way, vise-versa for blue.
                     if (red && !blue) { //if red is true and blue is false, execute.
                         if (runtime.seconds() < 0.25) {
@@ -140,6 +141,7 @@ public class AutonomousTest extends LinearOpMode {
                         runtime.reset();
                         step++;
                     }
+                    break;
                 case 2: //universal stop code.
                     servo.setPosition(s1);
 
@@ -149,6 +151,9 @@ public class AutonomousTest extends LinearOpMode {
                     RM.setPower(m5);
 
                     idle();
+                    break;
+                default: 
+                    break;
             }
         }
     }
