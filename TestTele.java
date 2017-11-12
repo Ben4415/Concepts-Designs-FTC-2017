@@ -42,8 +42,8 @@ public class TestTele extends OpMode {
 
         //gradual motor speed increase?
         if (gamepad1.left_bumper) {
-            LM.setPower(com.qualcomm.robotcore.util.Range.clip((LM.getPower() -0.01), 0.0, 1.0));
-            RM.setPower(com.qualcomm.robotcore.util.Range.clip((RM.getPower() -0.01), 0.0, 1.0));
+            LM.setPower(com.qualcomm.robotcore.util.Range.clip((LM.getPower() +0.01), 0.0, 1.0));
+            RM.setPower(com.qualcomm.robotcore.util.Range.clip((RM.getPower() +0.01), 0.0, 1.0));
         } else {
             LM.setPower(0.0);
             RM.setPower(0.0);
