@@ -40,6 +40,9 @@ public class TestTele extends OpMode {
 
         getJoysticks();
 
+        LM.setPower(x/2);
+        RM.setPower(y/2);
+        
         //gradual motor speed increase?
         if (gamepad1.left_bumper) {
             LM.setPower(com.qualcomm.robotcore.util.Range.clip((LM.getPower() +0.01), 0.0, 1.0));
@@ -48,9 +51,6 @@ public class TestTele extends OpMode {
             LM.setPower(0.0);
             RM.setPower(0.0);
         }
-
-        LM.setPower(x/2);
-        RM.setPower(y/2);
 
         while (gamepad2.a) belt.setPower(BP); //should also work with an if statement
         s0.setPosition((gamepad2.y) ? ser2 : ser1);
