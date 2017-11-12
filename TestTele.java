@@ -59,7 +59,6 @@ public class TestTele extends OpMode {
         if (gamepad2.b) {
             if (runtime.seconds() < 1.0) {
                 belt.setPower(BP);
-
             } else if (runtime.seconds() < 1.5) {
                 s2.setPosition(ser2);
             } else {
